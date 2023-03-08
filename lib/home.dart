@@ -12,8 +12,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: SafeArea(
+      body: SingleChildScrollView(
+      child: SafeArea(
         child: Center(
         child: Column(
           children:  [
@@ -25,7 +27,7 @@ class Home extends StatelessWidget {
 
           //welcome back
           const Text(
-            'Mama & Mtoto App',
+            'Street Close Emergency App',
             style: TextStyle(color: Colors.blueAccent, fontSize: 20, fontWeight: FontWeight.w400),
           ),
 
@@ -101,7 +103,7 @@ class Home extends StatelessWidget {
       ),
       ),
       ),
+    ),
     );
-
   }
 }
