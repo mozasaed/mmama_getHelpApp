@@ -87,27 +87,31 @@ class Home extends StatelessWidget {
                   // MyButton(onTap: signIn),
                   GestureDetector(
                     onTap: () {
-                      if (unameController.text ==
-                              'abdulmajeedhajji@gmail.com' &&
-                          psdController.text == '123456') {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const DashboardScreen()));
-                      } else if (unameController.text ==
-                              'abdulmajeedhajji@gmail.com' &&
-                          psdController.text == '123456') {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const DashboardScreen()));
-
-                      }else{
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content: Text('Invalid email or Password')),
-                        );
-                      }
+                      Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const DashboardScreen()));
+                      // if (unameController.text ==
+                      //         'abdulmajeedhajji@gmail.com' &&
+                      //     psdController.text == '123456') {
+                      //   Navigator.pushReplacement(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) => const DashboardScreen()));
+                      // } else if (unameController.text ==
+                      //         'abdulmajeedhajji@gmail.com' &&
+                      //     psdController.text == '123456') {
+                      //   Navigator.pushReplacement(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) => const DashboardScreen()));
+                      //
+                      // }else{
+                      //   ScaffoldMessenger.of(context).showSnackBar(
+                      //     const SnackBar(
+                      //         content: Text('Invalid email or Password')),
+                      //   );
+                      // }
 
                     },
                     child: Container(
