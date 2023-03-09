@@ -123,9 +123,9 @@ class _DocDashboardState extends State<DocDashboard> {
                                       width: 20,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(right: 5.0),
-                                    child: const Text(
+                                  const Padding(
+                                    padding: EdgeInsets.only(right: 5.0),
+                                    child: Text(
                                       'Pregnant Woman',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
@@ -154,9 +154,9 @@ class _DocDashboardState extends State<DocDashboard> {
                                       width: 20,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: const Text(
+                                  const Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text(
                                       'Very Eldery',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
@@ -204,9 +204,9 @@ class _DocDashboardState extends State<DocDashboard> {
                                   color: Colors.white,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: const Text('Critical',
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text('Critical',
                                     textAlign: TextAlign.center,
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
@@ -233,6 +233,7 @@ class _DocDashboardState extends State<DocDashboard> {
           color: Colors.white,
           child: Center(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   // mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -243,7 +244,7 @@ class _DocDashboardState extends State<DocDashboard> {
                         height: 100,
                         width: 100,
                         color: Colors.deepOrange,
-                        child: Text("Pict"),
+                        child: const Text("Pict"),
                       ),
                     ),
                     Padding(
@@ -276,7 +277,7 @@ class _DocDashboardState extends State<DocDashboard> {
                                         TextStyle(fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                Text("85"),
+                                Text("85yrs"),
                               ],
                             ),
                             Row(
@@ -299,13 +300,99 @@ class _DocDashboardState extends State<DocDashboard> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Row(
                     children: [
-                      Text("data"),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 7.0),
+                        child: Text(
+                          "Diseases:",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: Container(
+                          height: 25,
+                          decoration: const BoxDecoration(
+                              color: Colors.green,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          child: const Padding(
+                            padding: EdgeInsets.all(4.0),
+                            child: Text("Diabetis",style: TextStyle(color: Colors.white),),
+
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: Container(
+                          height: 25,
+                          decoration: const BoxDecoration(
+                              color: Colors.green,
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(8))),
+                          child: const Padding(
+                            padding: EdgeInsets.all(4.0),
+                            child: Text("Asthma",style: TextStyle(color: Colors.white)),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: Container(
+                          height: 25,
+                          decoration: const BoxDecoration(
+                              color: Colors.green,
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(8))),
+                          child: const Padding(
+                            padding: EdgeInsets.all(4.0),
+                            child: Text("Sickcell",style: TextStyle(color: Colors.white)),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                )
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text("Patient History",
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      Text(
+                          "ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et "),
+                    ],
+                  ),
+                ),
+                // Padding(
+                //   padding: const EdgeInsets.all(10.0),
+                //   child: Column(
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       const Text("Availability",
+                //           style: TextStyle(fontWeight: FontWeight.bold)),
+                //       const SizedBox(
+                //         height: 10,
+                //       ),
+                //       // Container(
+                //       //   height: 30,
+                //       //   decoration: const BoxDecoration(
+                //       //     color: Colors.green,
+                //       //     borderRadius: BorderRadius.all(Radius.circular(10))
+                //       //   ),
+                //       //   child: const Padding(
+                //       //     padding: EdgeInsets.all(5.0),
+                //       //     child: Text("Available For Emergency",style: TextStyle(color: Colors.white,fontWeight: ),),
+                //       //   ),
+                //       // ),
+                //     ],
+                //   ),
+                // ),
                 // Text('This is my bottom sheet'),
               ],
             ),
