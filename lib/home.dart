@@ -88,31 +88,31 @@ class Home extends StatelessWidget {
                   // MyButton(onTap: signIn),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const Landing()));
-                      // if (unameController.text ==
-                      //         'abdulmajeedhajji@gmail.com' &&
-                      //     psdController.text == '123456') {
-                      //   Navigator.pushReplacement(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //           builder: (context) => const DashboardScreen()));
-                      // } else if (unameController.text ==
-                      //         'mozasaid98@gmail.com' &&
-                      //     psdController.text == '123456') {
-                      //   Navigator.pushReplacement(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //           builder: (context) => const Landing()));
-                      //
-                      // }else{
-                      //   ScaffoldMessenger.of(context).showSnackBar(
-                      //     const SnackBar(
-                      //         content: Text('Invalid email or Password')),
-                      //   );
-                      // }
+                      // Navigator.pushReplacement(
+                      //           context,
+                      //           MaterialPageRoute(
+                      //               builder: (context) => const Landing()));
+                      if (unameController.text ==
+                              'abdulmajeedhajji@gmail.com' &&
+                          psdController.text == '123456') {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const DashboardScreen()));
+                      } else if (unameController.text ==
+                              'mozasaid98@gmail.com' &&
+                          psdController.text == '123456') {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Landing()));
+
+                      }else{
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text('Invalid email or Password')),
+                        );
+                      }
 
                     },
                     child: Container(
