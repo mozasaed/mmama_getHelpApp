@@ -6,7 +6,7 @@ gradle-wrapper.jar
 /local.properties
 GeneratedPluginRegistrant.java
 /app/src/main/AndroidManifest.xml
-../pubspec.yaml
+../pubspec.lock
 
 
 # Remember to never publicly share your keystore.
