@@ -41,15 +41,15 @@ class _ContactsState extends State<Contacts> {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-    //     appBar: AppBar(
-    //       title: const Text(
-    //         "Contacts",
-    //         style: TextStyle(color: Colors.white),
-    //       ),
-    //       centerTitle: true,
-    //       backgroundColor: Colors.blueAccent,
-    //       elevation: 0,
-    //     ),
+        appBar: AppBar(
+          title: const Text(
+            "Contacts",
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blueAccent,
+          elevation: 0,
+        ),
     //     body:
     //
     //     (contacts) == null
