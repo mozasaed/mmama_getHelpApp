@@ -1,43 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:mmama/pages/Setting.dart';
+import 'Contacts.dart';
+import 'RequestEmergency.dart';
+import 'SearchDoc.dart';
 
-import 'DocDashboard.dart';
-import 'ProfileScreen.dart';
-import 'Setting.dart';
-
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+class Landing extends StatefulWidget {
+  const Landing({Key? key}) : super(key: key);
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<Landing> createState() => _LandingState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _LandingState extends State<Landing> {
+  int _selectedIndex = 0;
+  final pages = [
+    const Scaffold(),
+    const Scaffold(),
+    const Scaffold(),
+    const Contacts(),
+  ];
+  final PageController _pageController = PageController();
 
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    const DocDashboard(),
-    const DocDashboard(),
-    const ProfileScreen(),
+    const ReqEmergency(),
+    const SearchDoc(),
+    const Contacts(),
     const Settings(),
+
   ];
 
-  int _selectedIndex = 0;
-
-  final PageController _pageController = PageController();
-
-
-
   void _onItemTapped(int index) {
-
     setState(() {
       _selectedIndex = index;
       _pageController.animateToPage(index,
           duration: const Duration(milliseconds: 300), curve: Curves.ease);
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
@@ -48,11 +51,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
           const BottomNavigationBarItem(
               icon: Icon(Icons.search_outlined), label: "Search"),
           const BottomNavigationBarItem(
-              icon: Icon(Icons.add_circle_outline), label: "Add Profile"),
+              icon: Icon(Icons.contact_phone), label: "Contact"),
           const BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: "Settings"),
-
+              icon: Icon(Icons.settings), label: "Settings"),
         ],
         onTap: (index) {
           setState(() {
@@ -62,7 +63,5 @@ class _DashboardScreenState extends State<DashboardScreen> {
       ),
       body: _pages[_currentIndex],
     );
-
-
   }
 }

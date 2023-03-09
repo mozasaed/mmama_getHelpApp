@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mmama/components/MyButton.dart';
 import 'package:mmama/components/MyTextFields.dart';
 import 'package:mmama/pages/Dashboard.dart';
+import 'package:mmama/patient/Landing.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
@@ -90,7 +91,7 @@ class Home extends StatelessWidget {
                       Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const DashboardScreen()));
+                                    builder: (context) => const Landing()));
                       // if (unameController.text ==
                       //         'abdulmajeedhajji@gmail.com' &&
                       //     psdController.text == '123456') {
@@ -99,12 +100,12 @@ class Home extends StatelessWidget {
                       //       MaterialPageRoute(
                       //           builder: (context) => const DashboardScreen()));
                       // } else if (unameController.text ==
-                      //         'abdulmajeedhajji@gmail.com' &&
+                      //         'mozasaid98@gmail.com' &&
                       //     psdController.text == '123456') {
                       //   Navigator.pushReplacement(
                       //       context,
                       //       MaterialPageRoute(
-                      //           builder: (context) => const DashboardScreen()));
+                      //           builder: (context) => const Landing()));
                       //
                       // }else{
                       //   ScaffoldMessenger.of(context).showSnackBar(
